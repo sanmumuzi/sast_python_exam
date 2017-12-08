@@ -106,7 +106,9 @@
 
 创建一个Sensor类，内部包含两个保护变量power和running（都是布尔值），默认全部为False，通过使用@property将方法设为属性，实现设置与获取这两个变量
 
-- 如果没有上电，就运行会抛出PowerError.
+- 如果没有上电，就运行会抛出PowerError.(将running变量改为True)
+
+- 如果在运行状态下(running为True)，将供电关闭，那么运行也会关闭。
 
 创建一个TemperatureSensor类，继承Sensor类，继承Sensor类的构造方法。内部拥有一个队列保存最近n次的数据(私有属性)。
 
